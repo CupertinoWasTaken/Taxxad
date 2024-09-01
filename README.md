@@ -1,7 +1,7 @@
 # Você foi Taxado!
 Bora calcular o quanto um imposto muda o preço de um produto no brasil?
 
-> [!WARNING]
+> [!CAUTION]
 > Este site é apenas uma piada, embora dê uma boa aproximação do preço final, o site ignora variações de IPI
 e os impostos cumulativos são quase que impossíveis de calcular corretamente.
 

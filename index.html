@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Você foi Taxado!</title>
+</head>
+<body>
+    <h1>Você foi Taxado!</h1>
+    <section class="award">
+        <img src="/assets/award.svg" />
+        <h2>Maior taxação sobre consumo do mundo</h2>
+        <img src="/assets/award.svg" class="award-right" />
+    </section>
+    <div class="money">
+        <span>R$</span>
+        <input type="number" id="price" placeholder="Preço"/>
+    </div>
+    <div class="tags">
+        <button id="state">
+            <i data-lucide="chevron-down"></i>
+            <img src="" />
+            <span>Estado</span>
+        </button>
+        <button id="cumulattive">Impostos Cumulativos</button>
+        <div id="dropdown">
+
+        </div>
+    </div>
+    <span class="muted"><i data-lucide="info"></i>Por padrão o estado selecionado é o Distrito Federal</span>
+    <span class="muted" style="color: #ef5d3c; margin-top: .25rem;"><i data-lucide="triangle-alert"></i>O IPI e os impostos cumulativos podem variar muito na realidade</span>
+    <div class="taxes">
+        <ul>
+            <li>
+                <h3>
+                    IPI 
+                    <span class="tax" id="ipi">~15<i data-lucide="badge-percent"></i></span>
+                </h3>
+                <span id="value-ipi" class="value">0</span>
+            </li>
+            <li>
+                <h3>
+                    ICMS
+                    <span class="tax"><span id="icms">?</span><i data-lucide="badge-percent"></i></span> 
+                </h3>
+                <span id="value-icms" class="value">0</span>
+            </li>
+            <li>
+                <h3>
+                    PIS
+                    <span class="slash">/</span>
+                    COFINS
+                    <span class="tax"><span id="PIS">1,65</span><span class="slash"> / </span><span id="COFINS">7,6</span><i data-lucide="badge-percent"></i></span>
+                    <span id="cummulated" title="O preço primeiro é taxado normalmente e mais tarde o total, já com todos os impostos aplicados, é novamente taxado."><i data-lucide="layers-3"></i></span>
+                </h3>
+                <span id="value-pis-cofins" class="value">0</span>
+            </li>
+            <li>
+                <h3>
+                    Total
+                </h3>
+                <span id="value-total" class="value">0</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script src="./dist/main.js" type="module"></script>
+<script defer>
+    setTimeout(() => {
+        lucide.createIcons()
+    }, 10)
+</script>

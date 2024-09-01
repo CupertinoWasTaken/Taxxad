@@ -1,0 +1,16 @@
+{
+  "name": "taxado",
+  "devDependencies": {
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "^1.7.22",
+    "chokidar": "^3.6.0"
+  },
+  "scripts": {
+    "build": "swc main.ts --out-dir dist --copy-files --source-maps --config-file .swcrc",
+    "watch": "swc main.ts --out-dir dist --copy-files --source-maps --config-file .swcrc --watch"
+  },
+  "type": "module",
+  "dependencies": {
+    "vercel": "^37.2.1"
+  }
+}
